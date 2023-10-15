@@ -1,0 +1,395 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoRegular.woff2"), url("../fonts/RobotoRegular.woff");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoMedium.woff2"), url("../fonts/RobotoMedium.woff");
+  font-display: swap;
+  font-weight: 500;
+}
+
+/* Glob */
+
+:root {
+  --white-solid-color: #fff;
+  --main-color: #212133;
+  --blue-color: #3f2aff;
+  --ebony-clay-color: #2e2b44;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Roboto", sans-serif;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-to-end {
+  align-items: flex-end;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+}
+
+.descr {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main-color);
+}
+
+.second-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--dove-gray-color);
+}
+
+.fz-hack {
+  font-size: 0;
+}
+
+/* Header */
+
+.header {
+  background-color: var(--blue-color);
+  padding: 27px 0;
+}
+
+.header__logo {
+  display: flex; /*  sa fie intru rind  */
+  align-items: center; /*  in container tot sa fie la mijloc */
+  margin-right: auto; /*  elementele au fost mutate in dreapta de la logo */
+}
+
+.header__menu-btn {
+  opacity: 0;
+}
+
+.nav__link {
+  font-size: 18px; /*  dimensiunea la text  */
+  line-height: 21px; /*  distanta intre rinduri  */
+  color: var(--white-solid-color); /*  culoarea din root */
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 57px;
+}
+
+/* Main */
+
+.hero {
+  padding-top: 20px;
+  background: radial-gradient(
+    44.07% 44.07% at 67.78% 55.93%,
+    #555681 0%,
+    #212133 100%
+  );
+}
+
+.hero__content {
+  padding-top: 116px;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  color: var(--white-solid-color);
+}
+
+.hero__descr {
+  font-size: 18px;
+  margin-bottom: 88px;
+  color: var(--white-solid-color);
+}
+
+.link {
+  border: 1px solid var(--blue-color); /*  border la buton */
+  border-radius: 20px; /*  butonul la margine sa fie oval*/
+  padding: 24px 76px; /*  distanta din interior la text  */
+  font-weight: 700; /*  marimea la srift */
+  font-size: 18px; /*  demensiunea la text */
+  line-height: 21px; /*  deminsiunea intre rinduri */
+  align-items: center; /*  pozitionarea textului */
+  background-color: var(
+    --blue-color
+  ); /*  culoarea la text din fundal intunecata*/
+  color: var(--white-solid-color);
+}
+
+/* About */
+
+.about {
+  background-color: #e5e5e5;
+}
+
+.about__title {
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 17px;
+  max-width: 380px; /*  marimea la bloc maximala p/u title */
+
+  color: var(--ebony-clay-color);
+}
+
+.about__title-img {
+  background-image: url(../img/about-block.png); /*  imaginea din background */
+}
+
+.about__advantage {
+  padding-top: 79px;
+  padding-bottom: 20px;
+  padding-left: 190px;
+  background-position: left 114px;
+  background-size: 160px 142px;
+  background-repeat: no-repeat;
+}
+
+.about__img-1 {
+  background-image: url(../img/eye-circle-1.svg);
+}
+
+.about__img-2 {
+  background-image: url(../img/eye-circle-2.svg);
+}
+
+.about__img-3 {
+  background-image: url(../img/eye-circle-3.svg);
+}
+
+.about__item {
+  padding-top: 16px;
+  padding-bottom: 91px;
+  padding-left: 110px;
+  background-position: left 2px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+}
+
+.about__info {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #666666;
+}
+
+/* Teachers */
+
+.teachers {
+  background: var(--main-color);
+  padding-bottom: 73px;
+}
+
+.teachers__title {
+  margin: 0;
+  padding-top: 75px;
+  padding-bottom: 23px;
+  color: var(--white-solid-color);
+}
+
+.teachers__list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.teachers-item__img {
+  border-radius: 25px 22px 0px 0px;
+  margin-bottom: 30px;
+}
+
+.teachers__item {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.teachers__name {
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--white-solid-color);
+}
+
+.teachers__descr {
+  color: #85859b;
+}
+
+/* Courses test 1  */
+
+.courses {
+  padding-bottom: 51px;
+}
+
+.courses__title {
+  padding-top: 75px;
+  padding-bottom: 20px;
+}
+
+.courses__list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.courses__box {
+  position: relative;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  padding-bottom: 30px;
+}
+
+.courses__time {
+  position: absolute;
+  right: 76px;
+  top: 11px;
+}
+
+.courses__timer-info {
+  position: absolute;
+  right: 5px;
+  top: 16px;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white-solid-color);
+}
+
+.courses__item-title {
+  font-size: 18px;
+  margin: 0;
+  margin-top: 21px;
+  margin-bottom: 11px;
+}
+
+.courses__descr {
+  margin-bottom: 71px;
+}
+
+.courses__card {
+  background: #edf0f9;
+  border-radius: 0px 0px 20px 20px;
+  padding: 11px 30px 50px 30px;
+}
+
+.courses__link {
+  padding-top: 40px;
+  margin-bottom: 10px;
+  padding: 21px 59px; /*  distanta din interior la text  */
+  font-size: 16px; /*  demensiunea la text */
+  line-height: 19px; /*  deminsiunea intre rinduri */
+}
+
+/* Footer */
+
+.footer__top {
+  background-color: var(--ebony-clay-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 34px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-solid-color);
+}
+
+.social__link svg {
+  fill: currentColor;
+}
+
+/* Footer__bottom  */
+
+.footer__copy {
+  display: block;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: var(--ebony-clay-color);
+}
+
+.footer__copy span {
+  color: #3f2aff;
+}
